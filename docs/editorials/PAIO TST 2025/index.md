@@ -1,4 +1,4 @@
-# PAIO TST 2025 Editorials
+# PAIO TST 2025
 This directory contains editorials for the problems from the PAIO TST 2025 contest.
 This contest served as a selection test to select Algeria's team in the Pan-African Informatics Olympiad (PAIO) 2025.
 

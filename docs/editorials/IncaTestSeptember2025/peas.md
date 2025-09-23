@@ -1,41 +1,51 @@
 # Peas
 
-*Written by Haithem Djefal*
+*Written by Haithem Djefel*
+
+## Problem Statement
 
 > [English](statements/peas_en.pdf)  
 > [Arabic](statements/peas_ar.pdf)  
 > [Arabic (Algeria)](statements/peas_dz.pdf)  
 > [French](statements/peas_fr.pdf)  
 
-## Idea:
+## 1. Idea
 
-First, for convenience, we will index pods in the order in which their opening brackets appear ($0$ through $n - 1$), then, we can make a rooted tree with the given information, the root is pod 0, and for each two nodes $u$ and $v$, $v$ is a child of $u$ if and only if pod $v$ is contained inside pod $u$.
+First, for convenience, we will index pods in the order in which their opening brackets appear (0 through n - 1), then, we can make a rooted tree with the given information, the root is pod 0, and for each two nodes $u$ and $v$, $v$ is a child of $u$ if and only if pod $v$ is contained inside pod $u$.
 
 Now, letting $max_i$ denote the maximum value that can be obtained after squishing pod number $i$, we can achieve any value $s \leq max_i$ after squishing pod number $i$, this is true because all the values are real numbers.
 
-For any leaf node $u$, $max_u = a_1$, and for any red pod $u$, $max_u = min(z_m, \sum{c \in children_u} max_c)$, where $m$ is the number of children of $u$.
+For any leaf node $u$, $max_u = a_1$, and for any red pod $u$, $max_u = min(z_m, \sum_{c \in children_u} max_c)$, where $m$ is the number of children of $u$.
 
-Now for the blue pods, we will use the following greedy approach, sort the children by their $max$ value in ascending order, and we keep processing them in this order one by one, for each child $v$, the maximum optimal value is $min(max_v,\frac{max sum}{\#children left})$, and $max sum$ starts with value $z_m$(m is the number of children), and keeps decreasing by the value we assign to each child.
+Now for the blue pods, we will use the following greedy approach, sort the children by their $max$ value in ascending order, and we keep processing them in this order one by one, for each child $v$, the maximum optimal value is $min(max_v,\frac{\text{max sum}}{\# \text{children left}})$, and $\text{max sum}$ starts with value $z_m$ ($m$ is the number of children), and keeps decreasing by the value we assign to each child.
 
-## Proof:
+
+## 2. Proof
 
 *Note: if you want only the proof of the general case, you can skip this paragraph*
 
-For the case of $max_u \geq \frac{z_m}{m}$, the proof directly follows from the Arithmetic mean-Geometric Mean (AM-GM) inequality, more formally, we need the maximum value for $\prod{i = 1}^{n} a_i$ s.t. $\sum_{i = 1}^{n} a_i \leq z_m$
+For the case of $max_u \geq \frac{z_m}{m}$, the proof directly follows from the Arithmetic mean-Geometric mean inequality, more formally, we need the maximum value for $\prod_{i = 1}^{n} a_i$ such that $\sum_{i = 1}^{n} a_i \leq z_m$
 
 By the AM-GM inequality, we have the following:
 
-$\sum_{i = 1}^{n} a_i \leq n\sqrt{\prod{i = 1}^{n}a_i}$
+$\sum_{i = 1}^{n} a_i \leq n\cdot\sqrt[n]{\prod_{i = 1}^{n}a_i}$
 
-Multiplying both sides by n and raising to the power of n, we get the maximum value for the product, which holds iff $a_1 = a_2 = … = a_n = \frac{z_m}{m}$.
+Dividing both sides by $n$ and raising to the power of $n$, we get the maximum value for the product, which holds iff $a_1 = a_2 = … = a_n = \frac{z_m}{m}$.
 
-the latter case was not necessary to prove, as we will prove the more general case, but I liked to introduce it in the editorial, as it helps build the intuition and make it way more natural.
+The latter case was not necessary to prove, as we will prove the more general case, but I liked to introduce it in the editorial, as it helps build the intuition and make it way more natural.
 
-## General case:
+## 3. Intuition
 
-for the general case, we will prove it by contradiction, suppose there exists an optimal partition for the numbers with $a_i < min(\frac{z_m}{m}, max_i)$ for some $i$(with the number of children > 1), then there exists some number $x \in \mathbb{R}$, that satisfies the following $a_i + x < min(\frac{z_m}{m}, max_i)$ and there exists an integer $j$ s.t. $a_j > a_i + x$, then $a_i * a_j > (a_i + x) * (a_j - x)$ must hold, expanding and reorganizing, this is equivalent to $a_i + x > a_j$, contradicting our assumption, we are done !
+From the previous idea we should notice that the numbers assigned to children must be “as close as possible”, now let’s formalize this.
 
-## Implementation:
+## 4. General case
+
+For the general case, we will prove it by contradiction, suppose there exists an optimal partition for the numbers with $a_i < min(\frac{z_m}{m}, max_i)$ for some $i$ (with the number of children > 1), then there exists some number $x \in \mathbb{R}$, that satisfies the following $a_i + x < min(\frac{z_m}{m}, max_i)$ and there exists an integer $j$ such that $a_j > a_i + x$, then $a_i * a_j > (a_i + x) * (a_j - x)$ must hold, expanding and reorganizing, this is equivalent to $a_i + x > a_j$, contradicting our assumption.
+
+And we're done!
+
+
+## 5. Implementation
 
 Below is a code in C++ for this approach
 
@@ -61,9 +71,12 @@ vector<vector<ll>> ch;
 vector<bool> type;
 vector<ll> a;
 
-ll dfs(ll u) {
-    // leaf node 
-    if (ch[u].size() == 0) return mx[u] = a[1];
+void dfs(ll u) {
+    // leaf node
+    if (ch[u].size() == 0) {
+        mx[u] = a[1];
+        return;
+    }
     
     // explore children first, if there are any
     for (ll v : ch[u]) dfs(v);
@@ -78,7 +91,9 @@ ll dfs(ll u) {
         ll s = 0;
         for (ll v : ch[u]) s += mx[v];
         
-        return mx[u] = min(s, max_cap);
+        mx[u] = min(s, max_cap);
+
+        return;
     }
 
     // the pod is blue
@@ -94,7 +109,7 @@ ll dfs(ll u) {
         val *= rm;
     }
 
-    return mx[u] = val;
+    mx[u] = val;
 }
 
 int main() {

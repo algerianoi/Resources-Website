@@ -1,4 +1,4 @@
-# IOI TST 2025 Editorials
+# IOI TST 2025
 
 This directory contains editorials for the problems from the IOI TST 2025 contest.
 This contest served as a selection test to select Algeria's team in the International Olympiad in Informatics (IOI) 2025.
