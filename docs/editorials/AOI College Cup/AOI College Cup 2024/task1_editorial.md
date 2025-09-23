@@ -2,7 +2,7 @@
 
 *Written by Fatima Amrat*
 
-- [Statement (English)] (statements/task-1.pdf)
+- [Statement (English)] (docs/editorials/AOI College Cup/AOI College Cup 2024/statements/task-1.pdf)
 
 
 ## Key Idea:
