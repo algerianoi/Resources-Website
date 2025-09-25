@@ -1,4 +1,4 @@
-# Summer Camp 2024 Test
+# AOI Phlox Test October 2024
 
 This directory contains editorials for the problems from October 2024 AOI Phlox Test.
 
