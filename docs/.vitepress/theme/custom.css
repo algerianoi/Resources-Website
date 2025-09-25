@@ -4,6 +4,10 @@
   font-family: "Outfit";
 }
 
+code * {
+  font-family: monospace !important;
+}
+
 /* misery */
 :root {
   --vp-c-brand-1: ##6284f2;
