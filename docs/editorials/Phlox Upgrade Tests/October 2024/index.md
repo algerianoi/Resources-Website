@@ -11,6 +11,3 @@ This directory contains editorials for the problems from October 2024 AOI Phlox 
 ## Contest organizers and contributors
 
 - Raouf Ould Ali
-- Abdelmalek Khelifi
-- Assil Boukhennoufa
-- Mohammed Hachem Drici
