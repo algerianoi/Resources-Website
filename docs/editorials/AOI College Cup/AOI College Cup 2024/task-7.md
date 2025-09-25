@@ -27,7 +27,7 @@ So $2^{60}$ fits in C++ `long long` type, which means we can easily calculate `(
 
 Well $2^{10⁷}$ is obviously **HUGE**.
 
-So we need to instead multiply our result by 2 using `res = (res * 2) % MOD`. This runs in O(n) which is feasible for this subtask.
+So we need to instead multiply our result by 2 for $n$ times using `res = (res * 2) % MOD`. This runs in O(n) which is feasible for this subtask.
 
 ## Subtask 3: $n \le 10^{18}$
 
