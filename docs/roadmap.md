@@ -50,7 +50,7 @@ This roadmap is a **recommended learning path** for AOI students who want to gra
 - Binary search on answer  
 - Binary exponentiation  
 - Interactive problems  
-- Intro to DP: Fibonacci, Coin Change  
+- [Intro to DP: Fibonacci, Coin Change](algorithms/dp.md)  
 - Graph representation: adjacency list vs. matrix  
 - Connected components  
 
@@ -63,7 +63,7 @@ This roadmap is a **recommended learning path** for AOI students who want to gra
 - Pointers & Iterators  
 - Trees (DFS, BFS, properties, DP)  
 - Tries  
-- Intermediate DP:  
+- [Intermediate DP:](algorithms/dp.md)  
     * Grid paths  
     * Prefix DP  
     * 0/1 Knapsack  
