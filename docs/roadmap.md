@@ -27,7 +27,7 @@ This roadmap is a **recommended learning path** for AOI students who want to gra
 
 ## Phase 2 – First Data Structures & Problem-Solving Tools
 
-- Prefix sums, difference arrays  
+- [Prefix sums, difference arrays](algorithms/prefix-sums.md)  
 - Stacks, queues, deques, linked lists  
 - `std::sort`, custom comparators  
 - Two pointers  
