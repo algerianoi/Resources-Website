@@ -21,4 +21,4 @@ This page collects **theory, tutorials, and problemsets** to help you master DP 
 
 - [AtCoder Educational DP Contest](https://atcoder.jp/contests/dp/tasks)
 - [CSES DP Section](https://cses.fi/problemset/)  
-
+- [The Incarnadine Training Units – Dynamic Programming](https://drive.google.com/file/d/1QbC1Njcez9rEZfUm0XfK0h2KVez5Jhk7/view)
