@@ -112,7 +112,7 @@ value = 50, original index = 0
 
 ---
 
-## Tip: Structured Bindings (C++17+)
+### Tip: Structured Bindings (C++17+)
 
 You can unpack pairs directly in loops.
 
