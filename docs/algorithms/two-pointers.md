@@ -3,7 +3,7 @@
 Two Pointers is a technique where we maintain two indices (often `l` and `r`) that move over the array or string.  
 Sliding Window is a special case applied to **contiguous subarrays**: we expand with one pointer, and contract with the other, depending on constraints.  
 
-This transforms many naive \(O(n^2)\) solutions into \(O(n)\) or \(O(n \log n)\) with proper data structures.
+This transforms many naive $O(n^2)$ solutions into $O(n)$ or $O(n \log n)$ with proper data structures.
 
 ---
 
