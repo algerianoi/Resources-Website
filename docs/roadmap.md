@@ -62,7 +62,7 @@ This roadmap is a **recommended learning path** for AOI students who want to gra
 - Coordinate compression  
 - Pointers & Iterators  
 - Trees (DFS, BFS, properties, DP)  
-- Tries  
+- [Tries](data-structures/tries.md)  
 - [Intermediate DP:](algorithms/dp.md)  
     * Grid paths  
     * Prefix DP  
