@@ -14,6 +14,7 @@ This page collects **theory, tutorials, and problemsets** to help you master DP 
 
 - [DP Basics Video- AOI](https://www.youtube.com/watch?v=Wze7A_D_GwQ)  
 - [Knapsack DP Video - AOI](https://www.youtube.com/watch?v=cifO4TsjUDo)  
+- [AOA PAIO Online Training | Dynamic Programming Recap](https://www.youtube.com/watch?v=jrQYz1i4xfY)
 - [DP Tutorial Video - Errichto](https://www.youtube.com/watch?v=YBSt1jYwVfU)  
 - [DP Playlist - WilliamFiset](https://www.youtube.com/watch?v=_tur2nPkIKo&list=PLDV1Zeh2NRsAsbafOroUBnNV8fhZa7P4u)  
 

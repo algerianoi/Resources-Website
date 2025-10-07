@@ -5,7 +5,8 @@ It can also be adapted for **bitwise operations** — for example, finding the m
 
 ## Resources
 
-* [AOI 2026 Camp #1 | Lecture on Tries](https://www.youtube.com/watch?v=9EB0jfQa4a4)
+* [AOI 2026 Camp #1 | Lecture on Tries Part 1 - String Tries](https://www.youtube.com/watch?v=9EB0jfQa4a4)
+* [AOI 2026 Camp #1 | Lecture on Tries Part 2 - Binary Tries](https://www.youtube.com/watch?v=11_52nXlzeg)
 * [Strings — MIT OpenCourseWare](https://www.youtube.com/watch?v=NinWEPPrkDQ)
 * [GeeksforGeeks — Introduction to Trie Data Structure and Algorithm](https://www.geeksforgeeks.org/dsa/introduction-to-trie-data-structure-and-algorithm-tutorials/)
 * [Codecademy — Complete Guide to Prefix Trees](https://www.codecademy.com/article/trie-data-structure-complete-guide-to-prefix-trees)
