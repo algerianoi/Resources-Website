@@ -32,7 +32,7 @@ This roadmap is a **recommended learning path** for AOI students who want to gra
 - [`std::sort`, custom comparators](fundamentals/builtin-sorting.md)
 - [Two pointers](algorithms/two-pointers.md)  
 - Simple greedy strategies + proof of correctness + Mathematical Induction  
-- Geometry basics: Dot/Cross Product, Manhattan Distance, Euclidean Distance  
+- [Geometry basics: Dot/Cross Product, Manhattan Distance, Euclidean Distance](math/geo-basics.md)  
 - Floating point number representation  
 - Radix conversion  
 - Binary search on arrays  
