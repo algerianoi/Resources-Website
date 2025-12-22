@@ -94,7 +94,7 @@ This roadmap is a **recommended learning path** for AOI students who want to gra
 - Divide & conquer on problems (inversion count, Karatsuba multiplication)  
 - Sparse tables, Segment Trees, Fenwick Tree, Merge Sort Tree  
 - [Binary Heaps](data-structures/heaps.md)
-- Union-Find (DSU)  
+- [Union-Find (DSU)](data-structures/union-find.md)  
 
 ---
 
