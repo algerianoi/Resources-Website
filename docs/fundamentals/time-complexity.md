@@ -13,6 +13,7 @@ Here are some useful resources to understand time complexity:
 - [A Time Complexity Guide](https://codeforces.com/blog/entry/104888) (en)
 
 ## Videos
+- [AOI December Camp 2025 - Lecture on Time Complexity](https://www.youtube.com/watch?v=mL9cPhErS1c) (ar)
 - [Learn Big O notation in 6 minutes - Bro Code](https://www.youtube.com/watch?v=XMUe3zFhM5c) (en)
 - [Big-O Notation in 5 minutes](https://www.youtube.com/watch?v=__vX2sjlpXU) (en)
 - [Intro to Time Complexity for CP](https://www.youtube.com/watch?v=MvmYncqlxMQ) (en)
