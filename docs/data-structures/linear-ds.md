@@ -9,6 +9,7 @@
 - [The Incarnadine Training Units – STL Data Structures](https://drive.google.com/file/d/1Ka7q4EtGyYkK0uNkwdfmCmZggs6v6x0C/view)
 - [Stack for Competitive Programming](https://www.geeksforgeeks.org/competitive-programming/stack-for-competitive-programming/)
 - [USACO Guide - Stacks](https://usaco.guide/gold/stacks?lang=cpp)
+- [December Camp 2025 Slides](LDS.pdf)
 
 
 ## Queues & Deques
