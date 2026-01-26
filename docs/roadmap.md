@@ -122,7 +122,8 @@ This roadmap is a **recommended learning path** for AOI students who want to gra
 - Centroid decomposition  
 - Knuth–Yao optimization  
 - Randomized Algorithms  
-- Lazy propagation  
+- Lazy propagation
+- Hall's Marriage Theorem
 - Geometry:  
     * Convex hull  
     * Rotations & angle problems  
