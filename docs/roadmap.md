@@ -49,7 +49,7 @@ This roadmap is a **recommended learning path** for AOI students who want to gra
 - Divisibility, Sieve of Eratosthenes, factorization in $O(\sqrt{n})$  
 - Binary search on answer  
 - Binary exponentiation  
-- Interactive problems  
+- [Interactive problems](fundamentals/interactive-problems.md)
 - [Intro to DP: Fibonacci, Coin Change](algorithms/dp.md)  
 - Graph representation: adjacency list vs. matrix  
 - Connected components  
