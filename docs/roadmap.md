@@ -35,7 +35,7 @@ This roadmap is a **recommended learning path** for AOI students who want to gra
 - [Geometry basics: Dot/Cross Product, Manhattan Distance, Euclidean Distance](math/geo-basics.md)  
 - Floating point number representation  
 - Radix conversion  
-- Binary search on arrays  
+- [Binary search on arrays](algorithms/binary-search.md)
 
 ---
 
