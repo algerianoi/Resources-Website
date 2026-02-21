@@ -31,7 +31,7 @@ This roadmap is a **recommended learning path** for AOI students who want to gra
 - [Stacks, queues, deques, linked lists](data-structures/linear-ds.md)  
 - [`std::sort`, custom comparators](fundamentals/builtin-sorting.md)
 - [Two pointers](algorithms/two-pointers.md)  
-- Simple greedy strategies + proof of correctness + Mathematical Induction  
+- [Greedy Algorithms](fundamentals/greedy-algorithms.md)  
 - [Geometry basics: Dot/Cross Product, Manhattan Distance, Euclidean Distance](math/geo-basics.md)  
 - Floating point number representation  
 - Radix conversion  
