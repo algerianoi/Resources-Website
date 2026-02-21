@@ -12,6 +12,7 @@
 *Side-note : reading some editorials will help you grasp the concepts, but solving problems is the key to mastering greedy algorithms.*
 
 ## Videos
+- [Greedy Algorithms In-depth Explanation and Playlist](https://www.youtube.com/watch?v=-WTslqPbj7I)
 - [Greedy Algorithms - Topic Stream](https://www.youtube.com/watch?v=g9-sRYP9Lvg)
 
 
