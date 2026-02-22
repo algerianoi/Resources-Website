@@ -48,7 +48,7 @@ This roadmap is a **recommended learning path** for AOI students who want to gra
 - Bitmasks for subsets  
 - Divisibility, Sieve of Eratosthenes, factorization in $O(\sqrt{n})$  
 - Binary search on answer  
-- Binary exponentiation  
+- [Binary exponentiation](math/binary-expo.md)  
 - [Interactive problems](fundamentals/interactive-problems.md)
 - [Intro to DP: Fibonacci, Coin Change](algorithms/dp.md)  
 - Graph representation: adjacency list vs. matrix  
