@@ -41,7 +41,7 @@ This roadmap is a **recommended learning path** for AOI students who want to gra
 
 ## Phase 3 – Brute Force, Recursion & Intro to Graphs/DP
 
-- Brute force & complexity limits  
+- [Brute force & complexity limits](fundamentals/complete-search.md)  
 - Sorting techniques: $O(n^2)$ sorts, Radix sort, Bucket sort
 - Recursion
 - Backtracking (N-queens, permutations)  
