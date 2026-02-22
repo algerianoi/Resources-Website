@@ -34,7 +34,7 @@ This roadmap is a **recommended learning path** for AOI students who want to gra
 - [Greedy Algorithms](fundamentals/greedy-algorithms.md)  
 - [Geometry basics: Dot/Cross Product, Manhattan Distance, Euclidean Distance](math/geo-basics.md)  
 - Floating point number representation  
-- Radix conversion  
+- [Radix conversion](math/radix-conversion.md)  
 - [Binary search on arrays](algorithms/binary-search.md)
 
 ---
