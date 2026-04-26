@@ -55,3 +55,75 @@ After sorting, you have a final complexity of $O(n \log n)$, which solves the pr
 
 The final solution for the problem consists of using the previous idea and doing the following for each $x$ between $1$ to $N$: if there exists two values $A[i], A[j]$ that are divisible by $x$, then we set their value as $D[i] = D[j] = x$. This works because the last number set in each $D[i]$ is the largest number that divides $A[i]$ and another number present in $A$. We can do this quickly over a frequency array in $O(n \log n)$ time (bound seen in previous subtask), and thus efficiently compute our $D[i]$ values. <br> <br>
 This fully solves the task. 
+
+Here is a sample implementation of the full solution:
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int MAX = 1e6;
+
+int main()
+{
+    
+    ios_base::sync_with_stdio(0);
+    cin.tie(NULL);
+
+    int n, buf;
+    cin >> n;
+    
+    vector<int> vs(n+1, 0), freq(MAX+1, 0);
+
+    for(int i = 0; i < n; ++i){    
+        cin >> vs[i];
+        if(freq[vs[i]] != 0) freq[vs[i]] = vs[i];
+        else freq[vs[i]] = 1;
+    }
+    
+
+    for(int i = 2; i < MAX+1; ++i){
+        
+        int valmod = 0, prev;
+        
+        for(int j = i; j < MAX+1; j += i){
+
+            if(freq[j]){
+
+                if(valmod == 0) prev = j;
+                else if(valmod == 1) freq[prev] = max(freq[prev], i);
+                
+                if(valmod > 0) freq[j] = max(freq[j], i);
+                valmod++;
+
+            }
+            
+        }
+    }
+
+    vector<int> sorting(n, 0);
+    iota(sorting.begin(), sorting.end(), 0);
+    
+    sort(
+        sorting.begin(), sorting.end(), 
+        [&](int &a, int &b){
+            
+            if(freq[vs[a]] < freq[vs[b]]) return true;
+            if(freq[vs[a]] > freq[vs[b]]) return false;
+
+            if(vs[a] < vs[b]) return true;
+            if(vs[a] > vs[b]) return false;
+
+            return a < b;
+        }
+    );
+    
+    for(int i = 0; i < sorting.size(); ++i){
+        cout << sorting[i] + 1; 
+        if(i < sorting.size() - 1) cout << " ";
+    }
+    
+
+    return 0;
+}
+```

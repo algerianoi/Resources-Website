@@ -67,3 +67,116 @@ Since there are $N^2$ states, and each state needs to check $N$ different values
 ### Full solution
 How do we optimize the solution even further? One more observation can be made: if there is a path between $s$ and $t$, the inverse path is also valid, thus there is a path between $t$ and $s$. This also means that whatever score is obtainable in $s$ can also be obtained in $t$. We can thus treat $s$ and $t$ as the same node. In technical terms, we simply merge nodes $s$ and $t$ whenever we find a valid path between them, which is whenever $s$ and $t$ are both adjacent to the same node/cluster of nodes. <br> <br>
 Merging can be done using a Union-find data structure in $O(N\alpha(N) + M)$ time, where $\alpha(x)$ is the inverse ackermann function. Queries can also be answered in $O(\alpha(N))$ time, which results in a final time complexity of $O((N + Q)\alpha(N) + M)$ time, solving our problem under the given constraints. <br> <br>
+
+Here is a sample implementation:
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+#define vi vector<int>
+
+void make_set(vi &par, vi &size, int node){
+    par[node] = node;
+    size[node] = 1;
+}
+
+int find_set(vi &par, int node){
+    if(node == par[node]) return node;
+    return par[node] = find_set(par, par[node]);
+}
+
+void union_set(vi &par, vi &size, int u, int v){
+    
+    int pu = find_set(par, u), pv = find_set(par, v);
+    if(pu == pv) return;
+    
+    if(size[pu] >= size[pv]){
+        par[pv] = pu;
+        size[pu] += size[pv];
+    }
+    else{
+        par[pu] = pv;
+        size[pv] += size[pu];
+    }
+    
+}
+
+int main()
+{
+    
+    int n, m, q;
+    cin >> n >> m;
+    
+    vector<vi> adj(n+1);
+    vi p(n+1, 0), sz(n+1, 0);
+    
+    queue<int> dsq;
+    int a, b;
+    
+    for(int i = 1; i <= n; ++i) make_set(p, sz, i);
+    for(int i = 0; i < m; ++i){
+        
+        char c;
+        
+        cin >> a >> b >> c;
+        
+        if(c == 'B'){
+            adj[b].push_back(a);
+            if(adj[b].size() == 2) dsq.push(b);
+        }
+        else{
+            adj[a].push_back(b);
+            if(adj[a].size() == 2) dsq.push(a);
+        }
+        
+    }
+    
+    while(!dsq.empty()){
+        
+        int u = dsq.front();
+        dsq.pop();
+        
+        set<int> ele;
+        for(auto i : adj[u]) ele.insert(find_set(p, i));
+        int x = *(ele.begin());
+
+        if(ele.size() > 1){
+            
+            if(x == u) x = *(ele.begin()++);
+
+            for(auto i : ele){
+                
+                union_set(p, sz, x, i);
+                if(find_set(p, x) == i) swap(x, i); 
+
+                if(i == x) continue;
+                if(i == u) adj[x].push_back(x);
+                else{
+                    for(auto e : adj[i]) adj[x].push_back(e);
+                    adj[i].clear();
+                }
+                
+            }
+            
+            if(adj[x].size() > 1) dsq.push(x);
+        }
+        
+        if(ele.find(u) == ele.end() || ele.size() == 1){
+            adj[u].clear();
+            adj[u].push_back(x);
+        }
+        
+    }
+    
+    cin >> q;
+
+    for(int i = 0; i < q; ++i){
+        cin >> a >> b;
+        if(find_set(p, a) == find_set(p, b)) cout << "1\n";
+        else cout << "0\n";
+    }
+
+    return 0;
+}
+```
