@@ -81,10 +81,7 @@ This roadmap is a **recommended learning path** for AOI students who want to gra
 - BFS, DFS in depth  
 - Planar Graphs, Eulerian Graphs, Hamiltonian Graphs  
 - Topological Sort & Euler Tour  
-- Shortest paths:  
-    * Dijkstra  
-    * Bellman–Ford  
-    * Floyd–Warshall  
+- [Shortest paths: Dijkstra, Bellman–Ford, Floyd–Warshall](algorithms/shortest-paths.md)  
 
 ---
 
